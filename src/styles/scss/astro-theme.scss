@@ -1,8 +1,8 @@
 // @use '../../../node_modules/@astrouxds/design-tokens/dist/scss/colors-global' as tokens;
-@import "../../../node_modules/@astrouxds/design-tokens/dist/css/_colors-dark.css";
-@import "../../../node_modules/@astrouxds/design-tokens/dist/css/_colors-light.css";
-@import "../../../node_modules/@astrouxds/design-tokens/dist/css/_colors-global.css";
-@import "../../../node_modules/@astrouxds/design-tokens/dist/css/_variables.css";
+@import "../../node_modules/@astrouxds/design-tokens/dist/css/_colors-dark.css";
+@import "../../node_modules/@astrouxds/design-tokens/dist/css/_colors-light.css";
+@import "../../node_modules/@astrouxds/design-tokens/dist/css/_colors-global.css";
+@import "../../node_modules/@astrouxds/design-tokens/dist/css/_variables.css";
 
 :root {
   --font-low-contrast-color: #cccccc;
