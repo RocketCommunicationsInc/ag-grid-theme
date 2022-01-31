@@ -43,7 +43,6 @@ $ag-theme-astro-default-params: (
     var(--color-gsb-global-status-bar, #172635),
   // Background for areas of the interface that contain UI controls, like tool panels and the chart settings menu
   control-panel-background-color: var(--table-control-background-color, #172635),
-  //! This was -contorls-background... which I think was a typo
   // Background color of selected rows in the grid and in dropdown menus
   selected-row-background-color: var(--color-selected, #1c3f5e),
   // Background color applied to every other row or null to use background-color for all rows
