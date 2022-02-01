@@ -255,4 +255,45 @@ $ag-theme-astro-params: map-merge(
   .ag-ltr .ag-column-select-column-group-drag-handle:not(:last-child) {
     margin-right: 6px; // match drag handle spacing between labels in checkbox lists and draggable chips
   }
+
+  ::-webkit-scrollbar {
+    width: 16px;
+    height: 16px;
+    background-color: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--color-active, rgb(43, 101, 155));
+    border-radius: 8px;
+    border: 3px solid transparent;
+    background-clip: padding-box;
+  }
+
+  /* visually "centers" because the dark edge of the shadow gives the illusion this is offset */
+  ::-webkit-scrollbar-thumb:vertical {
+    border-left-width: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:horizontal {
+    border-top-width: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:active,
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-primary, rgb(58, 129, 191));
+  }
+
+  ::-webkit-scrollbar-track,
+  ::-webkit-scrollbar-corner {
+    background-color: var(--color-surface, rgb(27, 45, 62));
+  }
+
+  ::-webkit-scrollbar-track:vertical {
+    box-shadow: inset 3px 3px 3px 0px rgba(0, 0, 0, 0.5);
+  }
+
+  ::-webkit-scrollbar-track:horizontal {
+    box-shadow: inset 1px 3px 3px 0px rgba(0, 0, 0, 0.5);
+  }
+
 }
