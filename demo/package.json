@@ -12,8 +12,6 @@
     "test.light": "backstop test --config light.config.js"
   },
   "devDependencies": {
-    "@astrouxds/design-tokens": "^1.4.0",
-    "ag-grid-community": "^23.2.1",
     "backstopjs": "^6.0.4",
     "vite": "^2.8.0"
   }
