@@ -41,3 +41,17 @@ The Astro Dark variant is the default theme. The Light variant can be assigned b
   <ag-grid- class="ag-theme-astro" ...></ag-grid->
 </section>
 ```
+
+## Contributing
+
+### Preview
+
+`cd /demo`
+`npm i`
+`npm run dev`
+
+### VRT 
+`npm run reference.dark`
+`npm run reference.light`
+`npm run test.dark`
+`npm run test.light`
