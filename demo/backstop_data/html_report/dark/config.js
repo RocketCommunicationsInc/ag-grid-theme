@@ -4,7 +4,7 @@ report({
     {
       "pair": {
         "reference": "../../snapshots/dark/dark_home_0_document_0_PC.png",
-        "test": "../../bitmaps_test/dark/20220328-145045/dark_home_0_document_0_PC.png",
+        "test": "../../bitmaps_test/dark/20220406-161324/dark_home_0_document_0_PC.png",
         "selector": "document",
         "fileName": "dark_home_0_document_0_PC.png",
         "label": "home",
