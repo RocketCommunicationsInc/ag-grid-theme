@@ -4,7 +4,7 @@ report({
     {
       "pair": {
         "reference": "../../snapshots/light/light_home_0_document_0_PC.png",
-        "test": "../../bitmaps_test/light/20220328-145051/light_home_0_document_0_PC.png",
+        "test": "../../bitmaps_test/light/20220406-161332/light_home_0_document_0_PC.png",
         "selector": "document",
         "fileName": "light_home_0_document_0_PC.png",
         "label": "home",
