@@ -217,7 +217,11 @@ $ag-theme-astro-params: map-merge(
 // Astro theme is built off Alpine theme
 .ag-theme-astro {
   @include ag-theme-alpine-dark($ag-theme-astro-params);
+  .ag-paging-button {
+    opacity: 1 !important;
+    position: relative !important;
 
+  }
   .ag-header {
     box-shadow: var(
       --table-header-box-shadow,
