@@ -4,10 +4,6 @@
  * Generic Styles
  ****************************
 */
-@import "../../node_modules/@astrouxds/design-tokens/dist/css/_colors-dark.css";
-@import "../../node_modules/@astrouxds/design-tokens/dist/css/_colors-light.css";
-@import "../../node_modules/@astrouxds/design-tokens/dist/css/_colors-global.css";
-@import "../../node_modules/@astrouxds/design-tokens/dist/css/_variables.css";
 ag-grid, ag-grid-angular, ag-grid-ng2, ag-grid-polymer, ag-grid-aurelia {
   display: block;
 }
@@ -1910,17 +1906,17 @@ ag-grid, ag-grid-angular, ag-grid-ng2, ag-grid-polymer, ag-grid-aurelia {
 
 :root {
   --font-low-contrast-color: #cccccc;
-  --table-control-background-color: var(--color-palette-darkblue-900, #172635);
+  --table-control-background-color: var(--color-palette-darkblue-900, $color-palette-darkblue-900);
   --table-cell-selected-border-color: var(
     --color-palette-brightblue-700,
-    #2b659b
+    $color-palette-brightblue-700
   );
   --toggle-track-border-color: #7a7a7a;
   --toggle-track-background-color: #cccccc;
   --toggle-selected-track-border-color: #1b7a99;
-  --toggle-selected-track-background-color: var(--color-gsb-interactive-default, #4dacff);
-  --toggle-thumb-background-color: var(--color-text-primary, #ffffff);
-  --toggle-thumb-border-color: var(--color-text-primary, #ffffff);
+  --toggle-selected-track-background-color: var(--color-palette-brightblue-500, $color-palette-brightblue-500);
+  --toggle-thumb-background-color: var(--color-text-primary, $color-text-primary);
+  --toggle-thumb-border-color: var(--color-text-primary, $color-text-primary);
   --table-header-box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.45);
 }
 
@@ -2142,8 +2138,8 @@ ag-grid, ag-grid-angular, ag-grid-ng2, ag-grid-polymer, ag-grid-aurelia {
   color: inherit;
   border-width: 1px;
   border-style: solid;
-  border-color: var(--color-interactive-default, #4dacff);
-  border-color: var(--ag-input-border-color, var(--color-interactive-default, #4dacff));
+  border-color: var(--color-border-interactive-default, #4dacff);
+  border-color: var(--ag-input-border-color, var(--color-border-interactive-default, #4dacff));
 }
 .ag-theme-astro input[class^=ag-]:not([type]):disabled,
 .ag-theme-astro input[class^=ag-][type=text]:disabled,
@@ -2218,8 +2214,8 @@ ag-grid, ag-grid-angular, ag-grid-ng2, ag-grid-polymer, ag-grid-aurelia {
   align-items: center;
 }
 .ag-theme-astro .ag-list-item.ag-active-item {
-  background-color: var(--color-background-surface-hover, #92cbff4d);
-  background-color: var(--ag-row-hover-color, var(--color-background-surface-hover, #92cbff4d));
+  background-color: var(--color-background-surface-hover, #1c3851);
+  background-color: var(--ag-row-hover-color, var(--color-background-surface-hover, #1c3851));
 }
 .ag-theme-astro .ag-select-list-item {
   padding-left: 4px;
@@ -2258,8 +2254,8 @@ ag-grid, ag-grid-angular, ag-grid-ng2, ag-grid-polymer, ag-grid-aurelia {
   opacity: 0.5;
 }
 .ag-theme-astro .ag-rich-select {
-  background-color: var(--table-control-background-color, #172635);
-  background-color: var(--ag-control-panel-background-color, var(--table-control-background-color, #172635));
+  background-color: var(--table-control-background-color);
+  background-color: var(--ag-control-panel-background-color, var(--table-control-background-color));
 }
 .ag-theme-astro .ag-rich-select-list {
   width: 100%;
@@ -2278,8 +2274,8 @@ ag-grid, ag-grid-angular, ag-grid-ng2, ag-grid-polymer, ag-grid-aurelia {
   height: 30px;
 }
 .ag-theme-astro .ag-rich-select-virtual-list-item:hover {
-  background-color: var(--color-background-surface-hover, #92cbff4d);
-  background-color: var(--ag-row-hover-color, var(--color-background-surface-hover, #92cbff4d));
+  background-color: var(--color-background-surface-hover, #1c3851);
+  background-color: var(--ag-row-hover-color, var(--color-background-surface-hover, #1c3851));
 }
 .ag-theme-astro .ag-rich-select-row {
   padding-left: 18px;
@@ -2328,8 +2324,8 @@ ag-grid, ag-grid-angular, ag-grid-ng2, ag-grid-polymer, ag-grid-aurelia {
 }
 
 .ag-theme-astro .ag-group-title-bar {
-  background-color: var(--color-interactive-default, #4dacff);
-  background-color: var(--ag-subheader-background-color, var(--color-interactive-default, #4dacff));
+  background-color: var(--color-background-interactive-default, #4dacff);
+  background-color: var(--ag-subheader-background-color, var(--color-background-interactive-default, #4dacff));
   padding: 6px;
 }
 .ag-theme-astro .ag-group-toolbar {
@@ -2503,10 +2499,10 @@ ag-grid, ag-grid-angular, ag-grid-ng2, ag-grid-polymer, ag-grid-aurelia {
   background-color: var(--ag-background-color, var(--color-background-surface-default, #1b2d3e));
 }
 .ag-theme-astro .ag-panel-title-bar {
-  background-color: var(--color-gsb-background-default, #172635);
-  background-color: var(--ag-header-background-color, var(--color-gsb-background-default, #172635));
-  color: var(--color-gsb-text-primary, #ffffff);
-  color: var(--ag-header-foreground-color, var(--color-gsb-text-primary, #ffffff));
+  background-color: var(--color-palette-darkblue-900, #172635);
+  background-color: var(--ag-header-background-color, var(--color-palette-darkblue-900, #172635));
+  color: var(--color-text-white, #ffffff);
+  color: var(--ag-header-foreground-color, var(--color-text-white, #ffffff));
   height: 42px;
   padding: 6px 18px;
   border-bottom: solid 1px;
@@ -2522,8 +2518,8 @@ ag-grid, ag-grid-angular, ag-grid-ng2, ag-grid-polymer, ag-grid-aurelia {
 }
 
 .ag-theme-astro .ag-tooltip {
-  background-color: var(--color-gsb-background-default, #172635);
-  background-color: var(--ag-header-background-color, var(--color-gsb-background-default, #172635));
+  background-color: var(--color-palette-darkblue-900, #172635);
+  background-color: var(--ag-header-background-color, var(--color-palette-darkblue-900, #172635));
   color: var(--color-text-primary, #ffffff);
   color: var(--ag-foreground-color, var(--color-text-primary, #ffffff));
   padding: 6px;
@@ -3240,8 +3236,8 @@ ag-grid, ag-grid-angular, ag-grid-ng2, ag-grid-polymer, ag-grid-aurelia {
   border-left-color: var(--ag-border-color, var(--color-background-base-default, #101923));
 }
 .ag-theme-astro .ag-row-hover {
-  background-color: var(--color-background-surface-hover, #92cbff4d);
-  background-color: var(--ag-row-hover-color, var(--color-background-surface-hover, #92cbff4d));
+  background-color: var(--color-background-surface-hover, #1c3851);
+  background-color: var(--ag-row-hover-color, var(--color-background-surface-hover, #1c3851));
 }
 .ag-theme-astro .ag-ltr .ag-right-aligned-cell {
   text-align: right;
@@ -3286,8 +3282,8 @@ ag-grid, ag-grid-angular, ag-grid-ng2, ag-grid-polymer, ag-grid-aurelia {
   padding: 6px;
   padding: 0;
   height: 42px;
-  background-color: var(--table-control-background-color, #172635);
-  background-color: var(--ag-control-panel-background-color, var(--table-control-background-color, #172635));
+  background-color: var(--table-control-background-color);
+  background-color: var(--ag-control-panel-background-color, var(--table-control-background-color));
 }
 .ag-theme-astro .ag-popup-editor {
   border: solid 1px;
@@ -3298,8 +3294,8 @@ ag-grid, ag-grid-angular, ag-grid-ng2, ag-grid-polymer, ag-grid-aurelia {
   border-radius: 1px;
   box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 3px rgba(0, 0, 0, 0.12), 0 4px 5px 0 rgba(0, 0, 0, 0.2);
   padding: 6px;
-  background-color: var(--table-control-background-color, #172635);
-  background-color: var(--ag-control-panel-background-color, var(--table-control-background-color, #172635));
+  background-color: var(--table-control-background-color);
+  background-color: var(--ag-control-panel-background-color, var(--table-control-background-color));
   padding: 0;
 }
 .ag-theme-astro .ag-large-text-input {
@@ -3526,8 +3522,8 @@ ag-grid, ag-grid-angular, ag-grid-ng2, ag-grid-polymer, ag-grid-aurelia {
   line-height: 16px;
 }
 .ag-theme-astro .ag-menu-option-active {
-  background-color: var(--color-background-surface-hover, #92cbff4d);
-  background-color: var(--ag-row-hover-color, var(--color-background-surface-hover, #92cbff4d));
+  background-color: var(--color-background-surface-hover, #1c3851);
+  background-color: var(--ag-row-hover-color, var(--color-background-surface-hover, #1c3851));
 }
 .ag-theme-astro .ag-menu-option-disabled {
   opacity: 0.5;
@@ -3674,8 +3670,8 @@ ag-grid, ag-grid-angular, ag-grid-ng2, ag-grid-polymer, ag-grid-aurelia {
   position: relative;
 }
 .ag-theme-astro .ag-tool-panel-wrapper {
-  background-color: var(--table-control-background-color, #172635);
-  background-color: var(--ag-control-panel-background-color, var(--table-control-background-color, #172635));
+  background-color: var(--table-control-background-color);
+  background-color: var(--ag-control-panel-background-color, var(--table-control-background-color));
 }
 .ag-theme-astro .ag-side-buttons {
   padding-top: 24px;
@@ -4038,15 +4034,15 @@ ag-grid, ag-grid-angular, ag-grid-ng2, ag-grid-polymer, ag-grid-aurelia {
   color: var(--ag-secondary-foreground-color, var(--font-low-contrast-color, #cccccc));
 }
 .ag-theme-astro .ag-header {
-  background-color: var(--color-gsb-background-default, #172635);
-  background-color: var(--ag-header-background-color, var(--color-gsb-background-default, #172635));
+  background-color: var(--color-palette-darkblue-900, #172635);
+  background-color: var(--ag-header-background-color, var(--color-palette-darkblue-900, #172635));
   border-bottom: solid 1px;
   border-bottom-color: var(--color-background-base-default, #101923);
   border-bottom-color: var(--ag-border-color, var(--color-background-base-default, #101923));
 }
 .ag-theme-astro .ag-header-row {
-  color: var(--color-gsb-text-primary, #ffffff);
-  color: var(--ag-header-foreground-color, var(--color-gsb-text-primary, #ffffff));
+  color: var(--color-text-white, #ffffff);
+  color: var(--ag-header-foreground-color, var(--color-text-white, #ffffff));
 }
 .ag-theme-astro .ag-pinned-right-header {
   border-left: solid 1px;
@@ -4191,8 +4187,8 @@ ag-grid, ag-grid-angular, ag-grid-ng2, ag-grid-polymer, ag-grid-aurelia {
   width: 16px;
 }
 .ag-theme-astro .ag-filter-loading {
-  background-color: var(--table-control-background-color, #172635);
-  background-color: var(--ag-control-panel-background-color, var(--table-control-background-color, #172635));
+  background-color: var(--table-control-background-color);
+  background-color: var(--ag-control-panel-background-color, var(--table-control-background-color));
   height: 100%;
   padding: 12px 12px;
   position: absolute;
@@ -4275,8 +4271,8 @@ ag-grid, ag-grid-angular, ag-grid-ng2, ag-grid-polymer, ag-grid-aurelia {
   opacity: 0.5;
 }
 .ag-theme-astro .ag-column-drop-horizontal {
-  background-color: var(--table-control-background-color, #172635);
-  background-color: var(--ag-control-panel-background-color, var(--table-control-background-color, #172635));
+  background-color: var(--table-control-background-color);
+  background-color: var(--ag-control-panel-background-color, var(--table-control-background-color));
   color: var(--font-low-contrast-color, #cccccc);
   color: var(--ag-secondary-foreground-color, var(--font-low-contrast-color, #cccccc));
   height: 42px;
@@ -4426,8 +4422,8 @@ ag-grid, ag-grid-angular, ag-grid-ng2, ag-grid-polymer, ag-grid-aurelia {
 }
 
 .ag-theme-astro .ag-chart-mini-thumbnail.ag-selected {
-  border-color: var(--color-interactive-default, #4dacff);
-  border-color: var(--ag-minichart-selected-chart-color, var(--ag-checkbox-checked-color, var(--color-interactive-default, #4dacff)));
+  border-color: var(--color-background-interactive-default, #4dacff);
+  border-color: var(--ag-minichart-selected-chart-color, var(--ag-checkbox-checked-color, var(--color-background-interactive-default, #4dacff)));
 }
 .ag-theme-astro .ag-chart-settings-card-item {
   background: var(--color-text-primary, #ffffff);
@@ -4437,8 +4433,8 @@ ag-grid, ag-grid-angular, ag-grid-ng2, ag-grid-polymer, ag-grid-aurelia {
   border-radius: 4px;
 }
 .ag-theme-astro .ag-chart-settings-card-item.ag-selected {
-  background-color: var(--color-interactive-default, #4dacff);
-  background-color: var(--ag-minichart-selected-page-color, var(--ag-checkbox-checked-color, var(--color-interactive-default, #4dacff)));
+  background-color: var(--color-background-interactive-default, #4dacff);
+  background-color: var(--ag-minichart-selected-page-color, var(--ag-checkbox-checked-color, var(--color-background-interactive-default, #4dacff)));
 }
 .ag-theme-astro .ag-chart-data-column-drag-handle {
   margin-left: 6px;
@@ -4483,8 +4479,8 @@ ag-grid, ag-grid-angular, ag-grid-ng2, ag-grid-polymer, ag-grid-aurelia {
   margin: 0;
 }
 .ag-theme-astro .ag-chart-menu-panel {
-  background-color: var(--table-control-background-color, #172635);
-  background-color: var(--ag-control-panel-background-color, var(--table-control-background-color, #172635));
+  background-color: var(--table-control-background-color);
+  background-color: var(--ag-control-panel-background-color, var(--table-control-background-color));
 }
 .ag-theme-astro .ag-ltr .ag-chart-menu-panel {
   border-left: solid 1px;
@@ -4542,8 +4538,8 @@ ag-grid, ag-grid-angular, ag-grid-ng2, ag-grid-polymer, ag-grid-aurelia {
 }
 .ag-theme-astro .ag-checkbox-input-wrapper::after {
   content: "\f108";
-  color: var(--color-interactive-default, #4dacff);
-  color: var(--ag-checkbox-unchecked-color, var(--color-interactive-default, #4dacff));
+  color: var(--color-background-interactive-default, #4dacff);
+  color: var(--ag-checkbox-unchecked-color, var(--color-background-interactive-default, #4dacff));
   position: absolute;
   top: 0;
   left: 0;
@@ -4551,8 +4547,8 @@ ag-grid, ag-grid-angular, ag-grid-ng2, ag-grid-polymer, ag-grid-aurelia {
 }
 .ag-theme-astro .ag-checkbox-input-wrapper.ag-checked::after {
   content: "\f106";
-  color: var(--color-interactive-default, #4dacff);
-  color: var(--ag-checkbox-checked-color, var(--color-interactive-default, #4dacff));
+  color: var(--color-background-interactive-default, #4dacff);
+  color: var(--ag-checkbox-checked-color, var(--color-background-interactive-default, #4dacff));
   position: absolute;
   top: 0;
   left: 0;
@@ -4560,8 +4556,8 @@ ag-grid, ag-grid-angular, ag-grid-ng2, ag-grid-polymer, ag-grid-aurelia {
 }
 .ag-theme-astro .ag-checkbox-input-wrapper.ag-indeterminate::after {
   content: "\f107";
-  color: var(--color-interactive-default, #4dacff);
-  color: var(--ag-checkbox-indeterminate-color, var(--ag-checkbox-unchecked-color, var(--color-interactive-default, #4dacff)));
+  color: var(--color-background-interactive-default, #4dacff);
+  color: var(--ag-checkbox-indeterminate-color, var(--ag-checkbox-unchecked-color, var(--color-background-interactive-default, #4dacff)));
   position: absolute;
   top: 0;
   left: 0;
@@ -4655,8 +4651,8 @@ ag-grid, ag-grid-angular, ag-grid-ng2, ag-grid-polymer, ag-grid-aurelia {
 }
 .ag-theme-astro .ag-radio-button-input-wrapper::after {
   content: "\f124";
-  color: var(--color-interactive-default, #4dacff);
-  color: var(--ag-checkbox-unchecked-color, var(--color-interactive-default, #4dacff));
+  color: var(--color-background-interactive-default, #4dacff);
+  color: var(--ag-checkbox-unchecked-color, var(--color-background-interactive-default, #4dacff));
   position: absolute;
   top: 0;
   left: 0;
@@ -4664,8 +4660,8 @@ ag-grid, ag-grid-angular, ag-grid-ng2, ag-grid-polymer, ag-grid-aurelia {
 }
 .ag-theme-astro .ag-radio-button-input-wrapper.ag-checked::after {
   content: "\f125";
-  color: var(--color-interactive-default, #4dacff);
-  color: var(--ag-checkbox-checked-color, var(--color-interactive-default, #4dacff));
+  color: var(--color-background-interactive-default, #4dacff);
+  color: var(--ag-checkbox-checked-color, var(--color-background-interactive-default, #4dacff));
   position: absolute;
   top: 0;
   left: 0;
@@ -4719,8 +4715,8 @@ ag-grid, ag-grid-angular, ag-grid-ng2, ag-grid-polymer, ag-grid-aurelia {
   background-color: var(--color-background-surface-default, #1b2d3e);
   background-color: var(--ag-background-color, var(--color-background-surface-default, #1b2d3e));
   border: 1px solid;
-  border-color: var(--color-interactive-default, #4dacff);
-  border-color: var(--ag-checkbox-unchecked-color, var(--color-interactive-default, #4dacff));
+  border-color: var(--color-background-interactive-default, #4dacff);
+  border-color: var(--ag-checkbox-unchecked-color, var(--color-background-interactive-default, #4dacff));
   border-radius: 16px;
   transform: translateY(-6.5px);
 }
@@ -4733,8 +4729,8 @@ ag-grid, ag-grid-angular, ag-grid-ng2, ag-grid-polymer, ag-grid-aurelia {
   background-color: var(--color-background-surface-default, #1b2d3e);
   background-color: var(--ag-background-color, var(--color-background-surface-default, #1b2d3e));
   border: 1px solid;
-  border-color: var(--color-interactive-default, #4dacff);
-  border-color: var(--ag-checkbox-unchecked-color, var(--color-interactive-default, #4dacff));
+  border-color: var(--color-background-interactive-default, #4dacff);
+  border-color: var(--ag-checkbox-unchecked-color, var(--color-background-interactive-default, #4dacff));
   border-radius: 16px;
 }
 .ag-theme-astro input[class^=ag-][type=range]::-moz-ag-range-thumb {
@@ -4746,8 +4742,8 @@ ag-grid, ag-grid-angular, ag-grid-ng2, ag-grid-polymer, ag-grid-aurelia {
   background-color: var(--color-background-surface-default, #1b2d3e);
   background-color: var(--ag-background-color, var(--color-background-surface-default, #1b2d3e));
   border: 1px solid;
-  border-color: var(--color-interactive-default, #4dacff);
-  border-color: var(--ag-checkbox-unchecked-color, var(--color-interactive-default, #4dacff));
+  border-color: var(--color-background-interactive-default, #4dacff);
+  border-color: var(--ag-checkbox-unchecked-color, var(--color-background-interactive-default, #4dacff));
   border-radius: 16px;
 }
 .ag-theme-astro input[class^=ag-][type=range]:focus {
@@ -4755,18 +4751,18 @@ ag-grid, ag-grid-angular, ag-grid-ng2, ag-grid-polymer, ag-grid-aurelia {
 }
 .ag-theme-astro input[class^=ag-][type=range]:focus::-webkit-slider-thumb {
   box-shadow: 0 0 2px 0.5px rgba(255, 255, 255, 0.5), 0 0 4px 3px rgba(33, 150, 243, 0.6);
-  border-color: var(--color-interactive-default, #4dacff);
-  border-color: var(--ag-checkbox-checked-color, var(--color-interactive-default, #4dacff));
+  border-color: var(--color-background-interactive-default, #4dacff);
+  border-color: var(--ag-checkbox-checked-color, var(--color-background-interactive-default, #4dacff));
 }
 .ag-theme-astro input[class^=ag-][type=range]:focus::-ms-thumb {
   box-shadow: 0 0 2px 0.5px rgba(255, 255, 255, 0.5), 0 0 4px 3px rgba(33, 150, 243, 0.6);
-  border-color: var(--color-interactive-default, #4dacff);
-  border-color: var(--ag-checkbox-checked-color, var(--color-interactive-default, #4dacff));
+  border-color: var(--color-background-interactive-default, #4dacff);
+  border-color: var(--ag-checkbox-checked-color, var(--color-background-interactive-default, #4dacff));
 }
 .ag-theme-astro input[class^=ag-][type=range]:focus::-moz-ag-range-thumb {
   box-shadow: 0 0 2px 0.5px rgba(255, 255, 255, 0.5), 0 0 4px 3px rgba(33, 150, 243, 0.6);
-  border-color: var(--color-interactive-default, #4dacff);
-  border-color: var(--ag-checkbox-checked-color, var(--color-interactive-default, #4dacff));
+  border-color: var(--color-background-interactive-default, #4dacff);
+  border-color: var(--ag-checkbox-checked-color, var(--color-background-interactive-default, #4dacff));
 }
 .ag-theme-astro input[class^=ag-][type=range]:active::-webkit-slider-runnable-track {
   background-color: rgba(33, 150, 243, 0.4);
@@ -4789,8 +4785,8 @@ ag-grid, ag-grid-angular, ag-grid-ng2, ag-grid-polymer, ag-grid-aurelia {
 .ag-theme-astro .ag-header-row,
 .ag-theme-astro .ag-panel-title-bar-title {
   font-weight: 700;
-  color: var(--color-gsb-text-primary, #ffffff);
-  color: var(--ag-header-foreground-color, var(--color-gsb-text-primary, #ffffff));
+  color: var(--color-text-white, #ffffff);
+  color: var(--ag-header-foreground-color, var(--color-text-white, #ffffff));
 }
 .ag-theme-astro .ag-rtl .ag-pinned-left-header .ag-header-row:before, .ag-theme-astro .ag-ltr .ag-pinned-right-header .ag-header-row:after {
   content: "";
@@ -4849,12 +4845,12 @@ ag-grid, ag-grid-angular, ag-grid-ng2, ag-grid-polymer, ag-grid-aurelia {
   color: var(--ag-alpine-active-color, #2196f3);
 }
 .ag-theme-astro .ag-menu {
-  background-color: var(--table-control-background-color, #172635);
-  background-color: var(--ag-control-panel-background-color, var(--table-control-background-color, #172635));
+  background-color: var(--table-control-background-color);
+  background-color: var(--ag-control-panel-background-color, var(--table-control-background-color));
 }
 .ag-theme-astro .ag-menu-header {
-  background-color: var(--table-control-background-color, #172635);
-  background-color: var(--ag-control-panel-background-color, var(--table-control-background-color, #172635));
+  background-color: var(--table-control-background-color);
+  background-color: var(--ag-control-panel-background-color, var(--table-control-background-color));
   padding-top: 1px;
 }
 .ag-theme-astro .ag-tabs-header {
@@ -4939,8 +4935,8 @@ ag-grid, ag-grid-angular, ag-grid-ng2, ag-grid-polymer, ag-grid-aurelia {
 .ag-theme-astro .ag-standard-button:hover {
   border-color: #2196f3;
   border-color: var(--ag-alpine-active-color, #2196f3);
-  background-color: var(--color-background-surface-hover, #92cbff4d);
-  background-color: var(--ag-row-hover-color, var(--color-background-surface-hover, #92cbff4d));
+  background-color: var(--color-background-surface-hover, #1c3851);
+  background-color: var(--ag-row-hover-color, var(--color-background-surface-hover, #1c3851));
 }
 .ag-theme-astro .ag-standard-button:active {
   border-color: #2196f3;
@@ -5036,8 +5032,8 @@ ag-grid, ag-grid-angular, ag-grid-ng2, ag-grid-polymer, ag-grid-aurelia {
 }
 .ag-theme-astro .ag-filter-toolpanel-instance-filter {
   border: none;
-  background-color: var(--table-control-background-color, #172635);
-  background-color: var(--ag-control-panel-background-color, var(--table-control-background-color, #172635));
+  background-color: var(--table-control-background-color);
+  background-color: var(--ag-control-panel-background-color, var(--table-control-background-color));
   border-left: dashed 1px;
   border-left-color: var(--color-background-base-default, #101923);
   border-left-color: var(--ag-border-color, var(--color-background-base-default, #101923));
@@ -5066,7 +5062,7 @@ ag-grid, ag-grid-angular, ag-grid-ng2, ag-grid-polymer, ag-grid-aurelia {
   border-bottom-width: 0;
 }
 .ag-theme-astro .ag-header-cell {
-  border-top: var(--color-interactive-default, #4dacff) 1px solid;
+  border-top: var(--color-border-interactive-default, #2b659b) 1px solid;
 }
 .ag-theme-astro .ag-checkbox-input-wrapper::after {
   border-radius: 2px;
@@ -5075,19 +5071,19 @@ ag-grid, ag-grid-angular, ag-grid-ng2, ag-grid-polymer, ag-grid-aurelia {
 .ag-theme-astro .ag-checkbox-input-wrapper:not(.ag-checked):not(.ag-indeterminate) {
   width: 16px;
   height: 16px;
-  border: 1px solid var(--color-interactive-default, #4dacff);
+  border: 1px solid var(--color-border-interactive-default, #4dacff);
 }
 .ag-theme-astro .ag-checkbox-input-wrapper:not(.ag-checked):not(.ag-indeterminate)::after {
   content: "";
 }
 .ag-theme-astro .ag-theme-astro .ag-checkbox-input-wrapper:active,
 .ag-theme-astro .ag-theme-astro .ag-checkbox-input-wrapper:focus-within {
-  box-shadow: inset 0 0 0 2px var(--color-interactive-default, #4dacff);
+  box-shadow: inset 0 0 0 2px var(--color-border-interactive-default, #4dacff);
 }
 .ag-theme-astro .ag-checkbox-input-wrapper.ag-checked::after {
-  background: var(--color-interactive-default-100, #cbdee9);
-  box-shadow: 0 0 0 1px var(--color-interactive-default, #4dacff);
-  color: var(--color-interactive-default, #4dacff);
+  background: var(--color-palette-darkblue-100, #cbdee9);
+  box-shadow: 0 0 0 1px var(--color-border-interactive-default, #4dacff);
+  color: var(--color-text-interactive-default, #4dacff);
 }
 .ag-theme-astro .ag-ltr .ag-column-select-column-drag-handle:not(:last-child),
 .ag-theme-astro .ag-ltr .ag-column-select-column-group-drag-handle:not(:last-child) {
@@ -5099,7 +5095,7 @@ ag-grid, ag-grid-angular, ag-grid-ng2, ag-grid-polymer, ag-grid-aurelia {
   background-color: transparent;
 }
 .ag-theme-astro ::-webkit-scrollbar-thumb {
-  background-color: var(--color-interactive-muted, #2b659b);
+  background-color: var(--color-border-interactive-muted, #2b659b);
   border-radius: 8px;
   border: 3px solid transparent;
   background-clip: padding-box;
@@ -5112,17 +5108,17 @@ ag-grid, ag-grid-angular, ag-grid-ng2, ag-grid-polymer, ag-grid-aurelia {
 }
 .ag-theme-astro ::-webkit-scrollbar-thumb:active,
 .ag-theme-astro ::-webkit-scrollbar-thumb:hover {
-  background-color: var(--color-interactive-default, #3a81bf);
+  background-color: var(--color-background-interactive-default, #4dacff);
 }
 .ag-theme-astro ::-webkit-scrollbar-track,
 .ag-theme-astro ::-webkit-scrollbar-corner {
   background-color: var(--color-background-surface-default, #1b2d3e);
 }
 .ag-theme-astro ::-webkit-scrollbar-track:vertical {
-  box-shadow: var(--shadow-inner-scrollbar-vertical);
+  box-shadow: var(--shadow-inner-scrollbar-vertical, inset 3px 3px 3px 0px rgba(0, 0, 0, 0.5));
 }
 .ag-theme-astro ::-webkit-scrollbar-track:horizontal {
-  box-shadow: var(--shadow-inner-scrollbar-horizontal);
+  box-shadow: var(--shadow-inner-scrollbar-horizontal, inset 1px 3px 3px 0px rgba(0, 0, 0, 0.5));
 }
 
 /*# sourceMappingURL=astro-ag-theme.css.map */

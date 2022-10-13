@@ -1,4 +1,5 @@
 # Logs
+demo/backstop_data
 logs
 *.log
 npm-debug.log*

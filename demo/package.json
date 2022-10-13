@@ -14,5 +14,8 @@
   "devDependencies": {
     "backstopjs": "^6.0.4",
     "vite": "^2.8.0"
+  },
+  "dependencies": {
+    "@astrouxds/tokens": "^1.0.2"
   }
 }
