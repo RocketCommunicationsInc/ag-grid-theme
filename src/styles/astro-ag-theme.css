@@ -4912,7 +4912,7 @@ ag-grid, ag-grid-angular, ag-grid-ng2, ag-grid-polymer, ag-grid-aurelia {
   margin-bottom: 0;
 }
 .ag-theme-astro .ag-dnd-ghost {
-  font-size: var(--font-size-base, 16px)-1;
+  font-size: calc(var(--font-size-base, 16px) - 1px);
   font-weight: 700;
 }
 .ag-theme-astro .ag-side-buttons {
