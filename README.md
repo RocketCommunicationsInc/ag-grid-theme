@@ -10,7 +10,7 @@ There are three parts to the Astro AG-Grid theme:
 2. The AG-Grid community alpine-dark theme that the Astro AG-Grid theme builds off of, which is imported from the `ag-grid-community` repository.
 3. The Astro AG-Grid theme itself, which is defined in `@astrouxds/ag-grid-theme/dist/main.css` and consumes the imported design tokens above.
 
-The @astrouxds/ag-grid-theme/dist/main.css file merges the ag-grid.css, ag-theme-alpine.css and the astro ag-grid theme sources so you will only need to import one file.
+The @astrouxds/ag-grid-theme/dist/main.css file merges the ag-grid.css, ag-theme-alpine-dark.css and the astro ag-grid theme sources so you will only need to import one file.
 
 ## Installation
 
@@ -34,11 +34,11 @@ Apply the class "ag-theme-astro" to your `ag-grid` element:
 
 ## Themes
 
-The Astro Dark variant is the default theme. The Light variant can be assigned by wrapping the grid in an element with the "light-theme" class.
+The Astro Dark variant is the default theme. The Light variant can be assigned by wrapping the grid in an element with the "light-theme" class, and using the "ag-theme-astro-light" class on the ag-grid element.
 
 ```html
 <section class="light-theme">
-  <ag-grid- class="ag-theme-astro" ...></ag-grid->
+  <ag-grid- class="ag-theme-astro-light" ...></ag-grid->
 </section>
 ```
 
@@ -50,7 +50,8 @@ The Astro Dark variant is the default theme. The Light variant can be assigned b
 `npm i`
 `npm run dev`
 
-### VRT 
+### VRT
+
 `npm run reference.dark`
 `npm run reference.light`
 `npm run test.dark`

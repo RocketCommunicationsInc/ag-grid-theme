@@ -1,12 +1,15 @@
-import './style.css'
+import './style.css';
 
 const getRandomNum = (min, max, roundTo = 0) => {
   const num = Math.random() * max + min
   return num.toFixed(roundTo)
 }
+
+const aButton = document.createElement('a')
+aButton.innerHTML = 'HI'
 const columnData = [
   { headerName: '', field: 'control' },
-  { headerName: 'Current tag', field: 'currentTag' },
+  { headerName: 'Current tag', field: 'currentTag', checkboxSelection: true },
   { headerName: 'Original tag', field: 'originalTag' },
   { headerName: 'Sensor', field: 'sensor' },
   { headerName: 'ASTAT', field: 'astat' },
@@ -16,6 +19,9 @@ const columnData = [
   { headerName: 'El/Dec', field: 'elDec' },
   { headerName: 'Range', field: 'range' },
   { headerName: 'Range rate', field: 'rangeRate' },
+  { headerName: 'Action', field: 'action', cellRenderer: params => {
+    // put the value in bold
+    return '<button>' + params.value + '</button>'; }},
 ]
 const agColumnData = columnData.slice(0)
 
@@ -34,7 +40,7 @@ for (let i = 0; i < agRowData.length; i++) {
       azRtAsc: 25954988,
       elDec: 25954988,
       range: 25954988,
-      rangeRate: 25954988
+      rangeRate: 25954988,
   }
 }
 
@@ -47,4 +53,4 @@ const gridOptions = {
 const eGridDiv = document.querySelector('#myGrid');
 
 // create the grid passing in the div to use together with the columns & data we want to use
-new agGrid.Grid(eGridDiv, gridOptions);
+agGrid.createGrid(eGridDiv, gridOptions);

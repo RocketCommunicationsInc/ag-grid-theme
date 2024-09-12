@@ -1,16 +1,16 @@
-report({
+{
   "testSuite": "BackstopJS",
   "tests": [
     {
       "pair": {
-        "reference": "../../snapshots/light/light_home_0_document_0_PC.png",
-        "test": "../../bitmaps_test/light/20240912-121723/light_home_0_document_0_PC.png",
+        "reference": "../../snapshots/dark/dark_home_0_document_0_PC.png",
+        "test": "../../bitmaps_test/dark/20240912-121704/dark_home_0_document_0_PC.png",
         "selector": "document",
-        "fileName": "light_home_0_document_0_PC.png",
+        "fileName": "dark_home_0_document_0_PC.png",
         "label": "home",
         "requireSameDimensions": false,
         "misMatchThreshold": 1e-10,
-        "url": "http://localhost:3000/light.html",
+        "url": "http://localhost:3000/",
         "expect": 0,
         "viewportLabel": "PC",
         "diff": {
@@ -25,5 +25,5 @@ report({
       "status": "pass"
     }
   ],
-  "id": "light"
-});
+  "id": "dark"
+}
