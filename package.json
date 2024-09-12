@@ -24,17 +24,17 @@
   },
   "homepage": "https://github.com/RocketCommunicationsInc/ag-grid-theme#readme",
   "devDependencies": {
-    "@astrouxds/tokens": "^1.0.2",
-    "copy-webpack-plugin": "^9.0.1",
-    "css-loader": "^6.2.0",
+    "@astrouxds/tokens": "^1.12.0",
+    "copy-webpack-plugin": "^12.0.2",
+    "css-loader": "^7.1.2",
     "mini-css-extract-plugin": "^2.2.2",
-    "sass": "^1.39.0",
-    "sass-loader": "^12.1.0",
-    "style-loader": "^3.2.1",
-    "webpack": "^5.52.0",
-    "webpack-cli": "^4.8.0"
+    "sass": "^1.45.2",
+    "sass-loader": "^16.0.1",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^5.1.4"
   },
   "dependencies": {
-    "ag-grid-community": "^23.2.1"
+    "ag-grid-community": "^32.1.0"
   }
 }
