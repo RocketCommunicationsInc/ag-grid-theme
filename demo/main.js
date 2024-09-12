@@ -1,3 +1,5 @@
+import './style.css';
+
 const getRandomNum = (min, max, roundTo = 0) => {
   const num = Math.random() * max + min
   return num.toFixed(roundTo)
