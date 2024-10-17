@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [8.1.0] - 2024-10-17
+
+### Added
+
+- Added padding on column header buttons
+- Hover state for column header buttons
+- Active state for column header filter buttons
+
+### Changed
+
+- Removed column header hover color
+
 ## [8.0.0] - 2024-09-12
 
 ### Added
