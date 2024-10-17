@@ -8049,7 +8049,7 @@ input[class^=ag-][type=range]:disabled {
   --ag-row-hover-color: var(--color-background-surface-hover, #1c3851);
   --ag-range-selection-border-color: var(--table-cell-selected-border-color, #2b659b);
   --ag-range-selection-background-color: #101923;
-  --ag-header-cell-hover-background-color: var(--color-background-surface-hover, #1c3851);
+  --ag-header-cell-hover-background-color: transparent;
   --ag-chip-background-color: var(--color-background-base-default, #101923);
   --ag-borders: solid 1px;
   --ag-border-radius: 1px;
@@ -8114,7 +8114,7 @@ input[class^=ag-][type=range]:disabled {
   --ag-row-hover-color: var(--color-background-surface-hover, #1c3851);
   --ag-range-selection-border-color: var(--table-cell-selected-border-color, #2b659b);
   --ag-range-selection-background-color: #eaeef4;
-  --ag-header-cell-hover-background-color: var(--color-background-surface-hover, #1c3851);
+  --ag-header-cell-hover-background-color: transparent;
   --ag-chip-background-color: var(--color-background-base-default, #101923);
   --ag-borders: solid 1px;
   --ag-border-radius: 1px;
@@ -8212,7 +8212,7 @@ input[class^=ag-][type=range]:disabled {
 }
 .ag-theme-astro .ag-header-cell:hover,
 .ag-theme-astro-light .ag-header-cell:hover {
-  background-color: var(--color-background-surface-hover);
+  background-color: transparent;
 }
 .ag-theme-astro .ag-row,
 .ag-theme-astro-light .ag-row {
@@ -8370,11 +8370,45 @@ input[class^=ag-][type=range]:disabled {
   box-shadow: var(--color-background-interactive-hover, #92cbff) 0 0 0 1px inset;
   outline: transparent solid 2px;
 }
+.ag-theme-astro .ag-header-icon,
+.ag-theme-astro-light .ag-header-icon {
+  border-radius: 3px;
+  padding: var(--spacing-1);
+}
+.ag-theme-astro .ag-header-icon:hover,
+.ag-theme-astro-light .ag-header-icon:hover {
+  background-color: var(--color-palette-darkblue-700);
+}
 .ag-theme-astro .ag-header-icon > .ag-icon,
 .ag-theme-astro .ag-sort-indicator-icon > .ag-icon,
 .ag-theme-astro-light .ag-header-icon > .ag-icon,
 .ag-theme-astro-light .ag-sort-indicator-icon > .ag-icon {
   color: var(--color-background-interactive-default, var(--ag-icon-font-color));
+}
+.ag-theme-astro .ag-filter-active,
+.ag-theme-astro-light .ag-filter-active {
+  position: relative;
+  background-color: var(--color-palette-darkblue-700);
+  box-shadow: 0 0 0 4px var(--ag-icon-active-color);
+}
+.ag-theme-astro .ag-header-icon:hover.ag-filter-active,
+.ag-theme-astro-light .ag-header-icon:hover.ag-filter-active {
+  background-color: var(--color-palette-darkblue-600);
+}
+.ag-theme-astro .ag-filter-active .ag-icon-filter,
+.ag-theme-astro-light .ag-filter-active .ag-icon-filter {
+  clip-path: path("M8,0C8,4.415 11.585,8 16,8L16,16L0,16L0,0L8,0Z");
+}
+.ag-theme-astro .ag-filter-active::after,
+.ag-theme-astro-light .ag-filter-active::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  top: 3.5px;
+  right: 3.5px;
+  border-radius: 50%;
+  background-color: var(--color-background-interactive-default);
 }
 .ag-theme-astro .ag-icon-filter,
 .ag-theme-astro .ag-icon-menu,
@@ -8436,6 +8470,18 @@ input[class^=ag-][type=range]:disabled {
 .ag-theme-astro ::-webkit-scrollbar-track:horizontal,
 .ag-theme-astro-light ::-webkit-scrollbar-track:horizontal {
   box-shadow: var(--shadow-inner-scrollbar-horizontal, inset 1px 3px 3px 0px rgba(0, 0, 0, 0.5));
+}
+
+.ag-theme-astro-light .ag-header-icon:hover {
+  background-color: var(--color-palette-darkblue-100);
+}
+.ag-theme-astro-light .ag-filter-active {
+  position: relative;
+  background-color: var(--color-palette-darkblue-100);
+  box-shadow: 0 0 0 4px var(--ag-icon-active-color);
+}
+.ag-theme-astro-light .ag-header-icon:hover.ag-filter-active {
+  background-color: var(--color-palette-darkblue-200);
 }
 
 /*# sourceMappingURL=astro-ag-theme.css.map */
